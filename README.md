@@ -1,99 +1,184 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# Nest.js boilerplate
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+[![onix](https://img.shields.io/badge/onix-systems-blue.svg)](https://onix-systems.com/)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Downloads Month](https://img.shields.io/jsdelivr/npm/hm/generator-nestjs-boilerplate?style=flat&color=green)](https://www.npmjs.com/package/generator-nest-js-boilerplate)
+[![Typescript for types](https://img.shields.io/npm/types/typescript)](https://www.typescriptlang.org/)
+[![Our rating](https://img.shields.io/librariesio/sourcerank/npm/generator-nest-js-boilerplate?color=green&label=Rating)](https://www.npmjs.com/package/generator-nest-js-boilerplate)
+[![License](https://img.shields.io/npm/l/generator-nest-js-boilerplate)](https://www.npmjs.com/package/generator-nest-js-boilerplate)
+[![Issues](https://img.shields.io/github/issues/Onix-Systems/nest-js-boilerplate?color=green)](https://github.com/Onix-Systems/nest-js-boilerplate/issues)
+[![Latest package version](https://img.shields.io/npm/v/generator-nest-js-boilerplate)](https://www.npmjs.com/package/generator-nest-js-boilerplate)
+[![Dependencies](https://img.shields.io/librariesio/release/npm/@onix-systems/generator-nestjs-boilerplate)](https://www.npmjs.com/package/generator-nest-js-boilerplate)
+[![Organization stars](https://img.shields.io/github/stars/Onix-Systems?label=Onix%20Stars&style=social)](https://github.com/Onix-Systems)
+[![Travis build passing](https://api.travis-ci.org/Onix-Systems/nest-js-boilerplate.svg?branch=master)](https://github.com/Onix-Systems/nest-js-boilerplate)
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+> Node.js Nest.js API. Supports MongoDB, Mysql, Redis
 
 ## Description
+This generator will help you to build your own Nest.js Mongodb/MySQL API using TypeScript 4
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+### Project Introduction
+- Support ES6/ES7 features
+- Using Eslint followed [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
+- Husky
+- Commitizen
+- MIT license and Code of conduct
+- Docker
+- Prettier
 
-## Project setup
+## Features
+##### Authentication:
+- passport local strategy
+- jwt authentication
+- passport google 2.0 strategy
+##### Session Storage:
+- MongoDB
+- Redis
+- MySQL
+##### Integration testing
+- mocha
+- chai
+- supertest
 
-```bash
-$ npm install
-```
+## Requirements
 
-## Compile and run the project
+- node >= 12
+- npm >= 6
+- mongodb >= 4.0
+- typescript >= 3.0
 
-```bash
-# development
-$ npm run start
+## Installation
 
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Run tests
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+First, install [Yeoman](http://yeoman.io) and generator-nest-js-boilerplate using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
-$ npm install -g mau
-$ mau deploy
+npm install -g yo
+npm install -g generator-nest-js-boilerplate
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+Then generate your new project:
 
-## Resources
+```bash
+yo nest-js-boilerplate
+```
 
-Check out a few resources that may come in handy when working with NestJS:
+App Skeleton
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+```
+├── src
+│├── components
+││├── app
+│││   └── ...
+││├── auth
+│││   └── ...
+││└── users
+││    └── ...
+│├── dto
+││└── ...
+│├── filters
+││└── ...
+│├── guards
+││└── ...
+│├── main.ts
+│└── pipes
+│    └── ...
+├── docker-compose.yml
+├── index.js
+├── nest-cli.json
+├── package.json
+├── package-lock.json
+├── README.md
+├── tsconfig.build.json
+└── tsconfig.json
 
-## Support
+```
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+## Running the API
+### Development
+To start the application in development mode, run:
 
-## Stay in touch
+```bash
+npm run start:dev
+```
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+Start the application in production env:
 
-## License
+Install ts pm2 and typescript compiler:
+```
+npm install -g pm2
+pm2 install typescript
+```
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+example start with scale on 2 core:
+```
+pm2 start ./dist/main.js -i 2 --no-daemon
+```
+
+Express server listening on http://localhost:3000/, in development mode
+The developer mode will watch your changes then will transpile the TypeScript code and re-run the node application automatically.
+
+### Docker
+
+* [Install Docker](https://docs.docker.com/get-docker/)
+* [Install docker-compose](https://docs.docker.com/compose/install/)
+
+To run your app in docker containers choose "Yes" when the generator asks you about docker.
+ 
+#### Now, lift up your app in docker 
+``` 
+  docker-compose up 
+```
+  
+## Set up environment
+In root folder you can find `.env`. You can use this config or change it for your purposes.
+
+## Deploy 
+### Heroku
+Check all urls to dbs if they are true, they must connect to dbs which located at them own servers like mongodb on Mlab
+When you'll run npm run deploy:heroku you'll need to sign in on heroku. You will be redirected to login form.
+
+```
+npm run deploy:heroku
+```
+
+        
+## Swagger
+Swagger documentation will be available on route:
+```bash
+http://localhost:3000/api
+```
+![Alt Text1](https://media.giphy.com/media/XEUyeEL03IcaZYw6SB/giphy.gif)
+
+### Jwt auth
+![Alt Text2](https://media.giphy.com/media/QUKuolFMyd0WsNFIUH/giphy.gif)
+
+### Oauth2 auth
+![Alt Text3](https://media.giphy.com/media/RiWDyLQwXaJXu972SM/giphy.gif)
+
+When you go by http://localhost:3000/google route, google'll ask you to authorize into your account. After successfully sign in to your account you will be redirected to http://localhost:3000/google/redirect route
+
+## Diagnose and pinpoint performance issues
+
+### Bubble
+![Bubble](https://i.ibb.co/tY6MQKR/Screenshot-from-2020-10-01-17-08-03.png)
+
+### Doctor
+![Doctor](https://i.ibb.co/FmD5dSk/Screenshot-from-2020-10-01-17-11-41.png)
+
+## Getting To Know Yeoman
+
+* Yeoman has a heart of gold.
+* Yeoman is a person with feelings and opinions, but is very easy to work with.
+* Yeoman can be too opinionated at times but is easily convinced not to be.
+* Feel free to [learn more about Yeoman](http://yeoman.io/).
+
+[travis-image]: https://travis-ci.org/caiobsouza/generator-ts-node-api.svg?branch=master
+[travis-url]: https://travis-ci.org/caiobsouza/generator-ts-node-api
+
+## Running migrations for Prisma
+
+For Mongodb run:
+`npx prisma generate`
+
+For Mysql/Postgres run:
+`npm run db:migration`
