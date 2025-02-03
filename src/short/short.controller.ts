@@ -8,16 +8,16 @@ import { User } from '../users/user.decorator'; // decorador para obter o usuár
 export class ShortUrlController {
   constructor(private readonly shortUrlService: ShortUrlService) {}
 
-  // Endpoint público para encurtar URL
   @Post('shorten')
   async shorten(@Body('originalUrl') originalUrl: string, @User() user?: any) {
-    const shortUrl = await this.shortUrlService.create(originalUrl, user);
+    const shortUrl = await this.shortUrlService.create(originalUrl, user?.sub); 
     return {
       code: shortUrl.code,
       shortUrl: `${process.env.BASE_URL || 'http://localhost:3000'}/${shortUrl.code}`,
       originalUrl: shortUrl.originalUrl,
     };
   }
+  
 
   // Redirecionamento pelo código
   @Get(':code')
@@ -28,8 +28,12 @@ export class ShortUrlController {
 
   // Os endpoints abaixo requerem autenticação
   @UseGuards(AuthGuard)
-  @Get('my')
+  @Get('code/list')
   async list(@User() user: any) {
+
+    delete user.iat
+    delete user.exp
+    
     const urls = await this.shortUrlService.listByUser(user);
     return urls;
   }

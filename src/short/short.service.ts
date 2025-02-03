@@ -60,27 +60,32 @@ export class ShortUrlService {
     return await this.shortUrlRepository.find({ where: { user } });
   }
 
-  // Atualiza o endereço de destino de um link (somente pelo dono)
   async update(code: string, originalUrl: string, user: UserEntity): Promise<ShortUrlEntity> {
-    const shortUrl = await this.shortUrlRepository.findOne({ where: { code } });
+    const shortUrl = await this.shortUrlRepository.findOne({
+      where: { code },
+      relations: ['user'],
+    });
+  
     if (!shortUrl) {
       throw new HttpException('Short URL not found', HttpStatus.NOT_FOUND);
     }
-    // Verifica se o link pertence ao usuário
+  
     if (!shortUrl.user || shortUrl.user.id !== user.id) {
       throw new HttpException('Not authorized to update this URL', HttpStatus.FORBIDDEN);
     }
-
+  
     shortUrl.originalUrl = originalUrl;
     return await this.shortUrlRepository.save(shortUrl);
   }
+  
 
   // Exclui o link encurtado (somente pelo dono)
   async remove(code: string, user: UserEntity): Promise<void> {
-    const shortUrl = await this.shortUrlRepository.findOne({ where: { code } });
+    const shortUrl = await this.shortUrlRepository.findOne({ where: { code }, relations: ['user'], });
     if (!shortUrl) {
       throw new HttpException('Short URL not found', HttpStatus.NOT_FOUND);
     }
+
     if (!shortUrl.user || shortUrl.user.id !== user.id) {
       throw new HttpException('Not authorized to delete this URL', HttpStatus.FORBIDDEN);
     }

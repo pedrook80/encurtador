@@ -1,4 +1,4 @@
-import { Column, CreateDateColumn, Entity, ManyToOne, PrimaryColumn, UpdateDateColumn } from 'typeorm';
+import { Column, CreateDateColumn, Entity, ManyToOne, PrimaryColumn, UpdateDateColumn, JoinColumn } from 'typeorm';
 import { UserEntity } from './user.entity';
 
 @Entity('short_urls')
@@ -11,6 +11,7 @@ export class ShortUrlEntity {
   originalUrl: string;
 
   @ManyToOne(() => UserEntity, { nullable: true })
+  @JoinColumn({ name: 'userId' })
   user?: UserEntity;
 
   @CreateDateColumn()

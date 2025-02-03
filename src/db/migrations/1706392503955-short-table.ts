@@ -16,14 +16,12 @@ export class ShortUrlsTableMigration implements MigrationInterface {
       );
     `);
 
-    // Se existir a tabela de usuários e desejar criar uma chave estrangeira, descomente o trecho abaixo:
-    /*
     await queryRunner.query(`
       ALTER TABLE short_urls
       ADD CONSTRAINT fk_short_urls_user
       FOREIGN KEY ("userId") REFERENCES users(id) ON DELETE SET NULL
     `);
-    */
+
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
