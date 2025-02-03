@@ -1,0 +1,1 @@
+{"version":3,"file":"1706614677285-user-table.js","sourceRoot":"","sources":["../../../src/db/migrations/1706614677285-user-table.ts"],"names":[],"mappings":";;;AAEA,MAAa,sBAAsB;IAC1B,KAAK,CAAC,EAAE,CAAC,WAAwB;QACtC,WAAW,CAAC,KAAK,CACf;;;;;;WAMK,CACN,CAAC;IACJ,CAAC;IAEM,KAAK,CAAC,IAAI,CAAC,WAAwB;QACxC,MAAM,WAAW,CAAC,KAAK,CAAC,4BAA4B,CAAC,CAAC;IACxD,CAAC;CACF;AAhBD,wDAgBC"}
