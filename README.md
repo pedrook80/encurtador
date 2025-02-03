@@ -62,3 +62,6 @@ In root folder you can find `.env`. You can use this config or change it for you
     
 If the migrations have some error please run but its active to be auto
 `npm run db:migration`
+
+## Documentation
+There is a file for Postman, there was a problem with Swagger that I didn't solve
